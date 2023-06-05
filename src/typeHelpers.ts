@@ -11,4 +11,5 @@ export interface IPickerProps {
   onColorChange?: (selectedColor: HsvColor) => void;
   onOldColorSelected?: (oldColor: string) => void;
   hideSliders?: boolean;
+  hideSliderLabels?: boolean;
 }

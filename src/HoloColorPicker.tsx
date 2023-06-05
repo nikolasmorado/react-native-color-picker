@@ -6,6 +6,7 @@ import {
   PanResponderInstance,
   Slider,
   StyleSheet,
+  Text,
   TouchableOpacity,
   View,
 } from "react-native"
@@ -258,7 +259,13 @@ export class HoloColorPicker extends React.PureComponent<
         </View>
         {this.props.hideSliders ? null : (
           <View>
+            {this.props.hideSliderLabels ? null : (
+              <Text>Satuation</Text>  
+            )}
             <SliderComp value={s} onValueChange={this._onSValueChange} />
+            {this.props.hideSliderLabels ? null : (
+              <Text>Value</Text>
+            )}
             <SliderComp value={v} onValueChange={this._onVValueChange} />
           </View>
         )}
